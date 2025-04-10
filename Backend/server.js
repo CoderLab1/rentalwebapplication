@@ -33,7 +33,10 @@ const contactRoutes = require("./routes/contactRoute");
 
 app.use("/api/contact", contactRoutes);
 
-
+app.get("/", (req, res) => {
+    res.send("🏠 HouseRental API is live!");
+  });
+  
 
 // ✅ Connect to MongoDB
 connectDB(); 
