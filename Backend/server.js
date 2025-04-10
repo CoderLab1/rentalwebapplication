@@ -15,7 +15,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // app.use(express.json()); // 🟢 Yeh hona zaroori hai
 
 app.use(cors({
-    origin: "https://your-frontend.vercel.app",  // ✅ yaha tera frontend URL hona chahiye
+    origin: "https://rentalwebapplication.vercel.app/",  // ✅ yaha tera frontend URL hona chahiye
     credentials: true
   }));
 
