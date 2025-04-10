@@ -14,7 +14,10 @@ app.use(express.json({ limit: "50mb" }));  // JSON payload size increase
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // app.use(express.json()); // 🟢 Yeh hona zaroori hai
 
-app.use(cors());
+app.use(cors({
+    origin: "https://your-frontend.vercel.app",  // ✅ yaha tera frontend URL hona chahiye
+    credentials: true
+  }));
 
 // ✅ Use Routes
 app.use("/api/auth", authRoutes);
